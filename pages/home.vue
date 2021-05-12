@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1>Home Page</h1>
-  </div>
+  <HomeTemplate />
 </template>
 <script lang="ts">
 import Vue from 'vue'
