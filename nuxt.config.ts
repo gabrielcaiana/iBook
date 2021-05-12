@@ -24,7 +24,7 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [{ path: '@/components', pathPrefix: false }],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -36,7 +36,11 @@ export default {
   modules: ['@nuxtjs/axios', '@nuxtjs/style-resources'],
 
   styleResources: {
-    scss: ['@/components/bosons/*.scss'],
+    scss: ['@/components/bosons/*.scss']
+   },
+
+   axios: {
+    BaseURL: process.env.NODE_ENV === 'production' ? '' : ''
    },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
