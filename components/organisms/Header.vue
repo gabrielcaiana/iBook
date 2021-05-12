@@ -3,7 +3,7 @@
     <nav>
       <ul class="items">
         <li class="item">
-          <NuxtLink to="">
+          <NuxtLink to="/home">
             <Logo />
           </NuxtLink>
         </li>
