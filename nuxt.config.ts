@@ -35,13 +35,13 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/axios', '@nuxtjs/style-resources'],
 
-  styleResources: {
-    scss: ['@/components/bosons/*.scss']
-   },
+  axios: {
+    baseURL: 'https://ibook-api.herokuapp.com',
+  },
 
-   axios: {
-    BaseURL: process.env.NODE_ENV === 'production' ? '' : ''
-   },
+  styleResources: {
+    scss: ['@/components/bosons/*.scss'],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
