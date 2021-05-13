@@ -7,7 +7,7 @@
         A página que você está procurando não existe ou foi removida
       </p>
       <NuxtLink to="/">
-        <button class="page-404__button">Voltar para Home</button>
+        <button class="page-error__button">Voltar para Home</button>
       </NuxtLink>
     </div>
     <div v-else class="page-error__container">
