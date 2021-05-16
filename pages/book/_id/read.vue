@@ -1,15 +1,15 @@
 <template>
-  <BookDetailsTemplate />
+  <BookReaderTemplate />
 </template>
+
 <script lang="ts">
 import Vue from 'vue'
 import { books } from '@/store'
 export default Vue.extend({
   layout: 'ibook',
-  async asyncData({ params }) {
-    await books.show({ id: Number(params.id) })
+  async asyncData({ route }) {
+    await books.show({ id: route.params.id as any })
   },
-
   head() {
     return {
       title: books.$single.title,

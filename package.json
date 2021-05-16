@@ -16,6 +16,7 @@
     "core-js": "^3.9.1",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.15.3",
+    "swiper": "^6.6.1",
     "vuex-module-decorators": "^1.0.1"
   },
   "devDependencies": {
