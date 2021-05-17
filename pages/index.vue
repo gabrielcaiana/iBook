@@ -8,7 +8,6 @@ export default Vue.extend({
   layout: 'ibook',
   async asyncData() {
     await books.index()
-    // await books.show({ id: 2})
   } 
 })
 </script>
