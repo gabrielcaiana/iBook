@@ -13,12 +13,13 @@
       placeholder="Senha"
     />
     <div class="login-form__actions">
-      <Button text="Entrar" buttonStyle="button-default" />
+      <Button text="Entrar" buttonStyle="button-default" type="submit" />
     </div>
   </form>
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import { auth } from '@/store'
 export default Vue.extend({
   data: () => ({
     login: {
@@ -28,8 +29,13 @@ export default Vue.extend({
   }),
 
   methods: {
-    submit() {
-      console.log(this.login)
+    async submit() {
+      try {
+        await auth.create(this.login)
+        this.$router.push('/dashboard')
+      } catch (err) {
+        console.log(err)
+      }
     },
   },
 })

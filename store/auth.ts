@@ -18,20 +18,18 @@ export default class Auth extends VuexModule {
   }
 
   @Action
-  async create({ email, password }: Store) {
-    const { accessToken, status }: any = await $axios.post('/login', {
+  async create({ email, password }: Store) {  
+    const { accessToken } = await $axios.$post('/login', {
       email,
       password,
     })
 
-    if (status === 200) {
-      $cookies.set('token', accessToken, {
-        path: '/',
-        maxAge: 60 * 60 * 24 * 30,
-      })
+    $cookies.set('token', accessToken, {
+      path: '/',
+      maxAge: 60 * 60 * 24 * 30,
+    })
 
-      this.context.commit('UPDATE_TOKEN', accessToken)
-    }
+    this.context.commit('UPDATE_TOKEN', accessToken)
   }
 
   @Action

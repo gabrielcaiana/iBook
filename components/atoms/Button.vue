@@ -1,5 +1,5 @@
 <template>
-  <button class="button" :class="buttonStyle">{{ text }}</button>
+  <button class="button" :class="buttonStyle" :type="type">{{ text }}</button>
 </template>
 
 <script lang="ts">
@@ -8,6 +8,7 @@ export default Vue.extend({
   props: {
     text: { type: String, required: true },
     buttonStyle: { type: String, required: false },
+    type: { type: String, required: true },
   },
 })
 </script>
@@ -15,7 +16,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .button {
   width: 100%;
-    transition: all 300ms ease;
+  transition: all 300ms ease;
 
   &:hover {
     transform: scale(1.05);
