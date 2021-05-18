@@ -4,6 +4,6 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-  layout: 'iBook',
+  layout: 'login'
 })
 </script>
