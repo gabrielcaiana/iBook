@@ -1,6 +1,11 @@
 # iBook
 
-## Build Setup
+## Tecnologias utilizadas:
+
+- Nuxt.js
+- TypeScript
+
+### Build Setup
 
 ```bash
 # install dependencies
