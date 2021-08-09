@@ -1,5 +1,7 @@
 # iBook
 
+![](static/preview.png)
+
 ## Tecnologias utilizadas:
 
 - Nuxt.js
